@@ -1,0 +1,17 @@
+tasks:
+  - init: |
+      echo 'TODO: build project'
+      python -m pip install --upgrade pip
+      python -m pip install --upgrade pip setuptools wheel pip-tools bpython coverage isort autoflake yapf
+      sudo apt-get install lynx direnv tor torsocks -y
+    command: |
+      echo 'TODO: start app'
+      python -m pip install -U -r requirements.in
+      echo 'TODO:Good!!!'
+vscode:
+  extensions:
+    - ms-python.python
+    - ms-toolsai.jupyter
+    - d-biehl.robotcode
+    - magicstack.magicpython
+    - formulahendry.code-runner
