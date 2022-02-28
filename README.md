@@ -31,3 +31,17 @@ python -m pip install --upgrade pip requests httpx bs4
 python -m pip install --upgrade 'requests[socks]'
 python -m pip install --upgrade 'httpx[socks]'
 ```
+
+```
+    # print(soup.prettify())
+    # print(soup.find_all('a'))
+
+    # limits = httpx.Limits(max_keepalive_connections=30, max_connections=10)
+```
+```
+# with requests.Session(proxies="http://localhost:9050") as s:
+#     r = s.get(url, headers=headers, params=querystring)
+#     print(r)
+
+# proxies = {"all": "socks5://127.0.0.1:9050"}
+```

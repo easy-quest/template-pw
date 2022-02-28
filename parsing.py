@@ -1,7 +1,13 @@
-# import requests
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# @Date    : 2022-02-28 21:57:37
+# @Author  : zzz <easy-quest@vk.com>
+# @Link    : https://github.com/easy-quest/
+# @Version : 1.0.0
 import httpx
 from bs4 import BeautifulSoup
 from click import secho as echo
+from core.pwcore import *
 
 url = "http://hydraclubbioknikokex7njhwuahc2l67lfiz7z36md2jvopda7nchid.onion/catalog/1"
 
@@ -30,21 +36,13 @@ cookies = {
     }
 
 timeout = httpx.Timeout(10.0, connect=60.0)
-# limits = httpx.Limits(max_keepalive_connections=30, max_connections=10)
-
-# with requests.Session(proxies="http://localhost:9050") as s:
-#     r = s.get(url, headers=headers, params=querystring)
-#     print(r)
-
-# proxies = {"all": "socks5://127.0.0.1:9050"}
 
 with httpx.Client(proxies='socks5://127.0.0.1:9050') as hs:
 # with httpx.Client(proxies=proxies) as hs:
     r = hs.get(url, headers=headers, params=querystring, cookies=cookies, timeout=timeout) 
     soup = BeautifulSoup(r.content, 'lxml')
-    # print(soup.prettify())
-    # print(soup.find_all('a'))
-    # with open('output.html', 'w') as f: f.write(soup.prettify())
+
+    with open("./html/" + ft() + ".html", 'w') as f: f.write(soup.prettify())
     items = soup.find_all('div', class_='catalog_item')
     
     itemsReegion = soup.find('li', class_='over').text
