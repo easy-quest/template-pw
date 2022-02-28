@@ -2,9 +2,10 @@ import httpx
 import requests
 from bs4 import BeautifulSoup
 from click import secho as echo
+import time
 
 def scrape_teams(url: str) -> None:
-    max_pages = 6
+    max_pages = 2
     current_page = 1
     
         
@@ -36,14 +37,14 @@ def scrape_teams(url: str) -> None:
         
         while current_page <= max_pages:
             current_url = f'{url}?query=&amp;sort_direction=desc&amp;sort=rate&amp;page={current_page}'
-            # print(current_url)
+            print(current_url)
         
             raw_html = hs.get(current_url, headers=headers, cookies=cookies, timeout=timeout)
             soup = BeautifulSoup(raw_html.content, 'lxml')
             items = soup.find_all('div', class_='catalog_item')
             
-            itemsReegion = soup.find('li', class_='over').text
-            echo(f'{itemsReegion}',bg='blue')
+            # itemsReegion = soup.find('li', class_='over').text
+            # echo(f'{itemsReegion}',bg='blue')
             
             for n, i in enumerate(items, start=1):
                 itemName = i.find('div', class_='title').text.strip()
@@ -52,6 +53,7 @@ def scrape_teams(url: str) -> None:
             
             # print(raw_html.status_code)
         
+            time.sleep(10)
             current_page += 1
         
     
