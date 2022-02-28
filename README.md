@@ -45,3 +45,58 @@ python -m pip install --upgrade 'httpx[socks]'
 
 # proxies = {"all": "socks5://127.0.0.1:9050"}
 ```
+
+```html
+<div class="pag_navigation">
+        <div class="wrp">
+         <ul class="pagination">
+          <li>
+           <a href="http://hydraclubbioknikokex7njhwuahc2l67lfiz7z36md2jvopda7nchid.onion/catalog/2?query=&amp;sort_direction=desc&amp;sort=rate&amp;page=1">
+            1
+           </a>
+          </li>
+          <li class="active">
+           <a href="http://hydraclubbioknikokex7njhwuahc2l67lfiz7z36md2jvopda7nchid.onion/catalog/2?query=&amp;sort_direction=desc&amp;sort=rate&amp;page=2">
+            2
+           </a>
+          </li>
+          <li>
+           <a href="http://hydraclubbioknikokex7njhwuahc2l67lfiz7z36md2jvopda7nchid.onion/catalog/2?query=&amp;sort_direction=desc&amp;sort=rate&amp;page=3">
+            3
+           </a>
+          </li>
+          <li>
+           <a href="http://hydraclubbioknikokex7njhwuahc2l67lfiz7z36md2jvopda7nchid.onion/catalog/2?query=&amp;sort_direction=desc&amp;sort=rate&amp;page=4">
+            4
+           </a>
+          </li>
+          <li>
+           <a href="http://hydraclubbioknikokex7njhwuahc2l67lfiz7z36md2jvopda7nchid.onion/catalog/2?query=&amp;sort_direction=desc&amp;sort=rate&amp;page=5">
+            5
+           </a>
+          </li>
+          <li>
+           <a href="http://hydraclubbioknikokex7njhwuahc2l67lfiz7z36md2jvopda7nchid.onion/catalog/2?query=&amp;sort_direction=desc&amp;sort=rate&amp;page=6">
+            6
+           </a>
+          </li>
+          <li class="pag_left">
+           <a href="http://hydraclubbioknikokex7njhwuahc2l67lfiz7z36md2jvopda7nchid.onion/catalog/2?query=&amp;sort_direction=desc&amp;sort=rate&amp;page=1">
+            <i class="i_left">
+            </i>
+           </a>
+          </li>
+          <li class="pag_right">
+           <a href="http://hydraclubbioknikokex7njhwuahc2l67lfiz7z36md2jvopda7nchid.onion/catalog/2?query=&amp;sort_direction=desc&amp;sort=rate&amp;page=3">
+            <i class="i_right">
+            </i>
+           </a>
+          </li>
+         </ul>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+```
