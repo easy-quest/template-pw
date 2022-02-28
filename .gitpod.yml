@@ -6,7 +6,7 @@ tasks:
       sudo apt-get install lynx direnv tor torsocks -y
     command: |
       echo 'TODO: start app'
-      python -m pip install -U -r requirements.in
+      python -m pip install -U -r requirements.txt
       echo 'TODO:Good!!!'
 vscode:
   extensions:

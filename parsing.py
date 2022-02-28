@@ -9,9 +9,12 @@ from bs4 import BeautifulSoup
 from click import secho as echo
 from core.pwcore import *
 
-url = "http://hydraclubbioknikokex7njhwuahc2l67lfiz7z36md2jvopda7nchid.onion/catalog/1"
+url = "http://hydraclubbioknikokex7njhwuahc2l67lfiz7z36md2jvopda7nchid.onion/catalog/2"
 
-querystring = {"query":"","region_id":"806","subregion_id":"0","price[min]":"","price[max]":"","unit":"g","weight[min]":"","weight[max]":"","type":"momental"}
+# querystring = {"query":"","region_id":"806","subregion_id":"0","price[min]":"","price[max]":"","unit":"g","weight[min]":"","weight[max]":"","type":"momental"}
+querystring = {"query":"","sort_direction":"desc","sort":"rate","page":"2"}
+
+
 
 headers = {
     'user-agent': "Mozilla/5.0 (Windows NT 10.0; rv:91.0) Gecko/20100101 Firefox/91.0",
@@ -41,12 +44,10 @@ with httpx.Client(proxies='socks5://127.0.0.1:9050') as hs:
 # with httpx.Client(proxies=proxies) as hs:
     r = hs.get(url, headers=headers, params=querystring, cookies=cookies, timeout=timeout) 
     soup = BeautifulSoup(r.content, 'lxml')
-
-    with open("./html/" + ft() + ".html", 'w') as f: f.write(soup.prettify())
+    # with open("./html/" + ft() + ".html", 'w') as f: f.write(soup.prettify())
     items = soup.find_all('div', class_='catalog_item')
     
     itemsReegion = soup.find('li', class_='over').text
-    # print(f'{itemsReegion}')
     echo(f'{itemsReegion}',bg='blue')
     
     for n, i in enumerate(items, start=1):
